@@ -1,0 +1,22 @@
+<h1 class="text-center text-orange " *ngIf="isGameRunning" [ngClass]="{'text-teal': activePlayer == 'X'}">
+    PLAYER {{ activePlayer }}'S TURN
+</h1>
+<h3> PLAYER : N </h3>
+<h3> PLAYER : X </h3>
+<h1 class="text-center text-grey-darker" *ngIf="!isGameRunning"> Tic-Tac-Toe Start.. </h1>
+<div class="section">
+    <div class="square-container board" *ngFor="let square of board">
+        <div class="game-square rounded-lg border bg-teal-lightest 
+        shadow-md " (click)="changePlayer(square)" [ngClass]="{noClick: winner} ">
+            <p class="text-grey-darker"> {{ square.state}} </p>
+        </div>
+    </div>
+</div>
+
+<h1 class="text-center  text-grey-darker" *ngIf="winner">
+    <span> WON THE PLAYER : {{ activePlayer == 'N' ? 'X' : 'N'}} </span>
+</h1>
+
+<button class="bg-blue" *ngIf="gameOver" (click)="newGame()"> Reset 
+</button>
+<!-- <button pButton *ngIf="gameOver" type="button" (click)="newGame()" label="Reset"></button> -->

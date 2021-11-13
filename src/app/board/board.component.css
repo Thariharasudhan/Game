@@ -1,0 +1,63 @@
+.section {
+    width: 600px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: space-between;
+    align-items: center;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.bg-blue {
+    cursor: pointer;
+    color: #ffffff;
+    background: #6366F1 !important;
+    border: 1 px solid #6366F1 !important;
+    padding: 0.65 rem;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 6 px !important;
+}
+
+.board {
+    height: 12rem;
+}
+
+.shadow-md {
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 12%), 0 2px 4px 0 rgb(0 0 0 / 8%);
+}
+
+.border {
+    border-width: 1 px;
+}
+
+.rounded-lg {
+    border-radius: 0.5 rem;
+}
+
+.bg-teal-lightest {
+    background-color: #e8fffe;
+}
+
+.square-container {
+    flex: 0 0 32%;
+    cursor: pointer;
+}
+
+.game-square {
+    height: 96%;
+    text-align: center;
+    line-height: 0.85;
+    cursor: pointer;
+}
+
+p {
+    display: inline;
+    margin: 0px;
+    font-size: 14rem;
+    overflow: hidden;
+}
+
+.noClick {
+    pointer-events: none;
+}
